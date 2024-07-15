@@ -1,0 +1,160 @@
+﻿@page
+@model UI.Web.Pages.Dashboard.CreateModel
+
+<form method="post" class="row g-3 needs-validation" novalidate>
+    @Html.AntiForgeryToken()
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.FirstName" required />
+            <label asp-for="Input.FirstName"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.LastName" required />
+            <label asp-for="Input.LastName"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.Id" required />
+            <label asp-for="Input.Id"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.DateOfBirth" required />
+            <label asp-for="Input.DateOfBirth"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.PhoneNumber" required />
+            <label asp-for="Input.PhoneNumber"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.Email" required />
+            <label asp-for="Input.Email"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-floating">
+            <textarea class="form-control" asp-for="Input.Address" required></textarea>
+            <label asp-for="Input.Address"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input class="form-control" asp-for="Input.Date" required />
+            <label asp-for="Input.Date"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+   
+
+   
+    
+    <div class="col-md-4">
+        <div class="form-floating">
+            <select asp-items="Model.Dentists" class="form-control" asp-for="Input.DentistName" required>
+                <option selected disabled value="">Choose a dentist...</option>
+            </select>
+            <label asp-for="Input.DentistName"></label>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Looks fail!
+            </div>
+        </div>
+    </div>
+
+
+    <button type="submit">Create</button>
+
+</form>
+
+@section Scripts {
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+}

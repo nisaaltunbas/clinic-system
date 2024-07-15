@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Concretes\" />
+    <None Remove="Concretes\Constants\" />
+    <None Remove="Abstracts\" />
+    <None Remove="Abstracts\Bases\" />
+    <None Remove="Abstracts\IRepositories\" />
+    <None Remove="Concretes\Entities\Clinic\" />
+    <None Remove="Abstracts\IRepositories\Dent\" />
+    <None Remove="Concretes\DTOs\" />
+    <None Remove="Abstracts\IServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concretes\Constants\" />
+    <Folder Include="Abstracts\" />
+    <Folder Include="Abstracts\Bases\" />
+    <Folder Include="Abstracts\IRepositories\" />
+    <Folder Include="Concretes\Entities\Clinic\" />
+    <Folder Include="Abstracts\IRepositories\Dent\" />
+    <Folder Include="Abstracts\IServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.17" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Utilities">
+      <HintPath>..\..\Utilities\bin\Release\net7.0\Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
